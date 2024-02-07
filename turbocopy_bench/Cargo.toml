@@ -1,0 +1,15 @@
+[package]
+name = "turbocopy_bench"
+version = "0.1.0"
+authors = ["Alvaro Tolentino <alvarotolentinou@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+turbocopy = { path = ".." }
+criterion = "0.5.1"
+libc = "0.2.110"
+
+[[bench]]
+name = "performance"
+path = "src/performance.rs"
+harness = false

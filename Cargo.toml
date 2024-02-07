@@ -1,0 +1,31 @@
+[package]
+name = "turbocopy"
+version = "0.1.0"
+authors = ["Alvaro Tolentino <alvarotolentinou@gmail.com>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+exclude = []
+members = [ "turbocopy_bench" ]
+
+[[bin]]
+name="copy"
+path="src/copy.rs"
+
+[lib]
+name="turbocopy"
+path="src/copy.rs"
+
+[dependencies]
+io-uring = "0.6.3"
+libc = "0.2.110"
+clap = {version="4.3.12", features = ["derive"]}
+
+[dev-dependencies]
+criterion = "0.5.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
