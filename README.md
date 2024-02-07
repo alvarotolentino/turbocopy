@@ -94,7 +94,7 @@ We copied a 1GB file 10 times using each method and measured the time taken for 
 | `CopyLibc` | [1.0447s 1.0589s 1.0743s] |
 | `CopyIoUring` | [1.3980s 1.4212s 1.4458s] |
 
-As you can see, the `CopyLibc` method is faster than the `CopyIoUring` method in our tests, this is because io_uring is not good for secuencial ac
+As you can see, the `CopyLibc` method is faster than the `CopyIoUring` method in our tests, this is because io_uring is not good for secuencial I/O
 
 Please note that these results may vary depending on the specific hardware and software configuration of your system.
 
